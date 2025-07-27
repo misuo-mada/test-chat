@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI試作品</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+ <div class="container">
+  <div class="center-area">
+    <h1>武田AI</h1>
+    <div class="character">
+      <video autoplay loop muted class="character-video">
+        <source src="videos/1.mp4" type="video/mp4">
+        お使いのブラウザは動画の再生をサポートしていません。
+      </video>
+    </div>
+  </div>
+    <div class="chat">
+      <div id="chat-output"></div>
+      <form id="chat-form">
+        <input type="text" id="user-input" placeholder="メッセージを入力してください..." required>
+        <button type="submit">話す</button>
+      </form>
+<form id="upload-form" enctype="multipart/form-data">
+  <input type="file" name="file" id="file" accept=".pdf,.docx,.txt" required />
+  <button type="submit">文書をアップロード</button>
+</form>
+
+<div id="summary-output"></div>
+
+<label><input type="checkbox" id="as-bullets"> 箇条書きにする</label>
+
+
+
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
